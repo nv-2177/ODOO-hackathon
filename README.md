@@ -804,3 +804,345 @@ Vehicle sent for maintenance
 * Update Maintenance Status
 Insurance nearing expiry
 Service due reminder
+<<<<<<< HEAD
+=======
+
+#SLIDE-6
+Fuel & Expense Management
+1. Navigation Sidebar
+Dashboard
+Fleet
+Drivers
+Trips
+Maintenance
+Fuel & Expenses (Active)
+Analytics
+Settings
+Active menu highlighting
+
+2. Top Navigation Bar
+Global search bar
+Logged-in user name
+User profile/avatar
+Current role badge (Dispatcher)
+Logout/Profile menu (expected)
+
+3. Fuel Logs
+Vehicle Name
+Fuel Log Date
+Fuel Quantity (Liters)
+Fuel Cost
+Add Fuel Log
+Fuel Log History
+Vehicle-wise fuel records
+
+4. Expense Management
+Add Expense
+Trip-wise expenses
+Vehicle-wise expenses
+Toll charges
+Other miscellaneous expenses
+Maintenance expenses (linked)
+Total expense calculation
+
+5. Operational Cost Summary
+Displays:
+Total Fuel Cost
+Maintenance Cost
+Overall Operational Cost (Auto Calculated)
+
+Expected Behavior:
+Automatic calculation
+Real-time updates
+Vehicle-wise cost tracking
+
+6. Expense Status
+
+Expense Status shown:
+Available
+Completed
+
+Features
+Color-coded status badges
+Status tracking
+Expense monitoring
+
+7. Search
+Search fuel logs
+Search vehicle
+Search trip
+Instant filtering
+
+8. Role-Based Access
+Dispatcher Permissions:
+View fuel logs
+Add fuel entries
+Record expenses
+View operational costs
+Cannot modify system settings
+
+9. Backend APIs
+Fuel Logs API
+Expense API
+Vehicle API
+Operational Cost API
+Search API
+
+10. Database Entities
+Vehicles
+Fuel Logs
+Expenses
+Trips
+Maintenance
+Users
+
+11. Actions
+Log Fuel
+Add Expense
+View Expense History
+Update Fuel Record
+Calculate Operational Cost
+
+12. Notifications (Expected)
+Fuel entry added
+Expense recorded
+Fuel budget exceeded
+High maintenance expense
+Operational cost updated
+
+13. UI Features
+Responsive layout
+Dark theme
+Status color coding
+Search functionality
+Action buttons
+Clean table layout
+
+14. Analytics (Expected)
+Fuel consumption
+Vehicle fuel efficiency
+Fuel cost trends
+Expense analysis
+Operational cost reports
+
+#SLIDE-7
+Reports & Analytics
+1. Navigation Sidebar
+Dashboard
+Fleet
+Drivers
+Trips
+Maintenance
+Fuel & Expenses
+Analytics (Active)
+Settings
+
+3. Top Navigation Bar
+Global search
+Logged-in user
+User profile/avatar
+Current role badge
+Logout/Profile menu (expected)
+
+4. KPI Cards
+Fuel Efficiency
+Fleet Utilization
+Operational Cost
+Vehicle ROI
+
+Expected Behavior:
+Live KPI updates
+Color indicators
+Real-time calculations
+
+4. Revenue Analytics
+Monthly revenue chart
+Revenue trends
+Business performance overview
+
+5. Fleet Performance
+Top costliest vehicles
+Vehicle operational cost comparison
+Fleet performance monitoring
+
+6. Reports
+Fuel reports
+Expense reports
+Revenue reports
+Operational cost reports
+Vehicle performance reports
+
+7. Search
+Search reports
+Search vehicle
+Search analytics
+
+8. Role-Based Access
+Dispatcher Permissions:
+View analytics
+View reports
+Monitor fleet performance
+Cannot edit financial configurations
+
+9. Backend APIs
+Analytics API
+Reports API
+Revenue API
+Vehicle Statistics API
+Fuel Analytics API
+
+10. Database Entities
+Reports
+Revenue
+Vehicles
+Fuel Logs
+Expenses
+Trips
+
+11. Dashboard Actions
+View Reports
+Export Reports
+Analyze Fleet
+Monitor Revenue
+Compare Vehicle Costs
+
+12. Notifications (Expected)
+Report generated
+Monthly analytics ready
+Fleet performance updated
+Cost threshold exceeded
+
+13. UI Features
+Dashboard cards
+Interactive charts
+Progress bars
+Dark theme
+Responsive design
+
+14. Analytics
+Fuel efficiency
+Fleet utilization
+Operational cost
+Vehicle ROI
+Monthly revenue
+Costliest vehicles
+Fleet performance
+
+#SLIDE-8
+Settings & Role-Based Access Control (RBAC)
+
+1. Navigation Sidebar
+Dashboard
+Fleet
+Drivers
+Trips
+Maintenance
+Fuel & Expenses
+Analytics
+Settings (Active)
+
+2. Top Navigation Bar
+Global search
+Logged-in user
+User profile/avatar
+Current role badge
+Logout/Profile menu (expected)
+
+3. General Settings
+Depot Name
+Currency
+Distance Unit
+Save Changes
+
+4. Role-Based Access Control (RBAC)
+
+Configured Roles:
+Fleet Manager
+Dispatcher
+Safety Officer
+Financial Analyst
+
+Permission Modules:
+Fleet
+Drivers
+Trips
+Fuel & Expenses
+Analytics
+
+Permissions:
+View
+Create
+Edit
+Manage
+Restricted Access
+
+5. User Management
+Logged-in user information
+Role identification
+Access control
+User permissions
+
+6. Search
+Search settings
+Search users
+Search roles
+
+7. Role-Based Features
+Fleet Manager:
+Full fleet management
+
+Dispatcher:
+Trip management
+Vehicle dispatch
+
+Safety Officer:
+Driver & trip monitoring
+
+Financial Analyst:
+Fuel & expense reports
+Analytics access
+
+8. Backend APIs
+Settings API
+User API
+RBAC API
+Permission API
+Authentication API
+
+9. Database Entities
+Users
+Roles
+Permissions
+Settings
+Authentication
+
+10. Settings Actions
+Update depot details
+Change currency
+Update units
+Assign roles
+Modify permissions
+Save settings
+
+11. Notifications (Expected)
+Settings updated
+Role assigned
+Permission changed
+User access modified
+
+12. UI Features
+Responsive layout
+Dark theme
+Role permission table
+Simple settings form
+Clean interface
+Save button
+Secure access
+
+13. Security Features
+Role-Based Access Control (RBAC)
+Authentication
+Permission management
+Secure user access
+Access restriction based on roles
+>>>>>>> 3895b2237d424e5d843c50881b446de2412eafec
