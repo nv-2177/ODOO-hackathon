@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-base: #0B0F14;
+  --color-surface: #121924;
+  --color-surface-2: #1B2431;
+  --color-surface-3: #232E3D;
+  --color-border: #26313F;
+  --color-border-soft: #1E2733;
+
+  --color-text: #E7ECF2;
+  --color-text-muted: #90A0B2;
+  --color-text-faint: #5B6B7C;
+
+  --color-amber: #F0A93A;
+  --color-amber-soft: #3A2C15;
+  --color-teal: #33C9B0;
+  --color-teal-soft: #0F2E29;
+  --color-danger: #E5584F;
+  --color-danger-soft: #3A1917;
+  --color-success: #4ADE80;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: 999px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

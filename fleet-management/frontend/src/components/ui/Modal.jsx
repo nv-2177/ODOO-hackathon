@@ -1,0 +1,24 @@
+import { X } from "lucide-react";
+
+export default function Modal({ open, onClose, title, children }) {
+  if (!open) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/60" onClick={onClose} />
+      <div className="relative bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl w-full max-w-md shadow-2xl">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--color-border)]">
+          <h3 className="font-display font-bold text-base text-[var(--color-text)]">{title}</h3>
+          <button
+            onClick={onClose}
+            className="text-[var(--color-text-faint)] hover:text-[var(--color-text)]"
+            aria-label="Close dialog"
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <div className="p-5">{children}</div>
+      </div>
+    </div>
+  );
+}

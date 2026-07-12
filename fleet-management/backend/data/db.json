@@ -1,0 +1,168 @@
+{
+  "users": [
+    {
+      "id": "usr_ekzwwJ33",
+      "name": "Arjun Mehta",
+      "email": "admin@fleet.com",
+      "password": "$2a$08$ECufyJYJC0t6W5Ma7/lB8.TOioUsdT/Y0blFoz4/0x3LggvWebh0C",
+      "role": "Admin"
+    },
+    {
+      "id": "usr_IK8Cm0_R",
+      "name": "Priya Nair",
+      "email": "dispatcher@fleet.com",
+      "password": "$2a$08$25RSAIyvUGuDRVHilwRTo.SbZSeRaehoT/aTKMNy0HZzc8L49zhi.",
+      "role": "Dispatcher"
+    },
+    {
+      "id": "usr_ANiHoH8F",
+      "name": "Karthik Raja",
+      "email": "manager@fleet.com",
+      "password": "$2a$08$ITjR00sKlAMSYboZPOJd.O1nTberzuzL.LSK4uGhYUWUxSeybTxYO",
+      "role": "Manager"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "veh_kC1Qbjk3",
+      "name": "Tata Ace - TN01AB1234",
+      "regNo": "TN01AB1234",
+      "type": "Mini Truck"
+    },
+    {
+      "id": "veh_pHsyC8v6",
+      "name": "Ashok Leyland - TN22CD5678",
+      "regNo": "TN22CD5678",
+      "type": "Truck"
+    },
+    {
+      "id": "veh_DOiRoF5m",
+      "name": "Mahindra Bolero - TN09EF9012",
+      "regNo": "TN09EF9012",
+      "type": "Pickup"
+    },
+    {
+      "id": "veh_6D37IUw3",
+      "name": "Eicher Pro - TN37GH3456",
+      "regNo": "TN37GH3456",
+      "type": "Truck"
+    }
+  ],
+  "drivers": [
+    {
+      "id": "drv_RVyAQc9X",
+      "name": "Suresh Kumar",
+      "phone": "9876543210",
+      "licenseNo": "TN0120230001"
+    },
+    {
+      "id": "drv_DNKuv56g",
+      "name": "Ramesh Babu",
+      "phone": "9876543211",
+      "licenseNo": "TN0120230002"
+    }
+  ],
+  "trips": [
+    {
+      "id": "trp_ZWtxI5P4",
+      "vehicleId": "veh_kC1Qbjk3",
+      "origin": "Chennai",
+      "destination": "Bengaluru",
+      "date": "2026-07-01",
+      "status": "Completed"
+    },
+    {
+      "id": "trp_O4faSoLW",
+      "vehicleId": "veh_pHsyC8v6",
+      "origin": "Chennai",
+      "destination": "Coimbatore",
+      "date": "2026-07-05",
+      "status": "Completed"
+    },
+    {
+      "id": "trp_7895pI6o",
+      "vehicleId": "veh_DOiRoF5m",
+      "origin": "Chennai",
+      "destination": "Madurai",
+      "date": "2026-07-10",
+      "status": "Available"
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "mnt_gaz-L7Q-",
+      "vehicleId": "veh_kC1Qbjk3",
+      "description": "Engine oil change",
+      "cost": 3500,
+      "date": "2026-06-20"
+    },
+    {
+      "id": "mnt_zyRsNFtB",
+      "vehicleId": "veh_pHsyC8v6",
+      "description": "Tyre replacement",
+      "cost": 22000,
+      "date": "2026-06-25"
+    }
+  ],
+  "fuelLogs": [
+    {
+      "id": "fuel_bOLBVr0U",
+      "vehicleId": "veh_kC1Qbjk3",
+      "date": "2026-07-01",
+      "quantityLiters": 40,
+      "cost": 4200,
+      "odometer": 45210,
+      "createdBy": "Priya Nair"
+    },
+    {
+      "id": "fuel_B2xeOGo2",
+      "vehicleId": "veh_pHsyC8v6",
+      "date": "2026-07-05",
+      "quantityLiters": 80,
+      "cost": 8600,
+      "odometer": 98120,
+      "createdBy": "Priya Nair"
+    },
+    {
+      "id": "fuel_gFFgjwqE",
+      "vehicleId": "veh_DOiRoF5m",
+      "date": "2026-07-09",
+      "quantityLiters": 35,
+      "cost": 3750,
+      "odometer": 21050,
+      "createdBy": "Priya Nair"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "exp_bzBzVe_9",
+      "type": "Toll",
+      "vehicleId": "veh_kC1Qbjk3",
+      "tripId": "trp_ZWtxI5P4",
+      "amount": 450,
+      "date": "2026-07-01",
+      "status": "Completed",
+      "description": "NH48 toll charges"
+    },
+    {
+      "id": "exp_HkhZC2bR",
+      "type": "Miscellaneous",
+      "vehicleId": "veh_pHsyC8v6",
+      "tripId": "trp_O4faSoLW",
+      "amount": 800,
+      "date": "2026-07-05",
+      "status": "Available",
+      "description": "Driver food & lodging"
+    },
+    {
+      "id": "exp_itaSijqj",
+      "type": "Maintenance",
+      "vehicleId": "veh_pHsyC8v6",
+      "tripId": null,
+      "amount": 22000,
+      "date": "2026-06-25",
+      "status": "Completed",
+      "description": "Linked maintenance expense - tyre replacement"
+    }
+  ]
+}
