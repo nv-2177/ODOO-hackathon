@@ -450,11 +450,357 @@ Export to Excel
 Print vehicle registry
 Filtered report export
 
-16. Notifications (Expected)
+
+17. Notifications (Expected)
 Vehicle added successfully
 Vehicle updated
 Duplicate registration error
 Vehicle retired
 Vehicle sent for maintenance
+
+## **Slide 3: Drivers & Safety Profiles**
+
+### **1. Navigation Sidebar**
+
+* Dashboard
+* Fleet
+* Drivers (Active)
+* Trips
+* Maintenance
+* Fuel & Expenses
+* Analytics
+* Settings
+
+### **2. Top Navigation**
+
+* Global Search
+* User Profile
+* Role Badge
+* Logout/Profile Menu
+
+### **3. Search & Filters**
+
+* Search by Driver Name
+* Search by License Number
+* Search by Assigned Vehicle
+* Filter by Driver Status
+* Filter by Safety Status
+
+### **4. Driver Table**
+
+**Columns:**
+
+* Driver Name
+* License Number
+* Assigned Vehicle
+* License Expiry
+* Contact Number
+* Age
+* Driver Status
+* Safety Status
+* Remarks
+* Actions
+
+### **5. Driver Status**
+
+**Supported Statuses:**
+
+* Available
+* On Trip
+* Off Duty
+* Suspended
+
+### **6. Safety Status**
+
+* Valid License
+* Expired License
+* Suspended
+* Under Review (optional)
+
+### **7. Driver Actions**
+
+* Add Driver
+* View Driver
+* Edit Driver
+* Delete Driver
+* Update Driver Status
+* Update Safety Status
+* View Driver History
+
+### **8. Add/Edit Driver Form**
+
+* Driver Name
+* License Number
+* Assigned Vehicle
+* License Expiry Date
+* Phone Number
+* Age
+* Driver Status
+* Safety Status
+* Remarks
+* Save
+* Cancel
+
+### **9. Business Rules**
+
+* Expired licenses cannot be dispatched
+* Suspended drivers cannot be assigned
+* Driver status updates automatically
+* License validity checked automatically
+
+### **10. Validation**
+
+* Required fields
+* Unique License Number
+* Valid Phone Number
+* Age > 18
+* Future License Expiry Date
+
+### **11. Backend APIs**
+
+* GET /api/drivers
+* GET /api/drivers/:id
+* POST /api/drivers
+* PUT /api/drivers/:id
+* DELETE /api/drivers/:id
+* PUT /api/drivers/:id/status
+* PUT /api/drivers/:id/safety
+* GET /api/drivers/search
+* GET /api/drivers/filter
+
+### **12. Role Permissions**
+
+**Dispatcher**
+
+* View Drivers
+* Assign Drivers
+
+**Fleet Manager**
+
+* Full CRUD
+
+**Safety Officer**
+
+* Update Safety Status
+* Suspend Drivers
+
+---
+
+# **Slide 4: Trip Dispatcher**
+
+### **1. Navigation Sidebar**
+
+* Dashboard
+* Fleet
+* Drivers
+* Trips (Active)
+* Maintenance
+* Fuel & Expenses
+* Analytics
+* Settings
+
+### **2. Top Navigation**
+
+* Search Trips
+* User Profile
+* Role Badge
+
+### **3. Filters**
+
+* Trip Status
+* Vehicle
+* Driver
+* Route
+
+### **4. Create Trip Button**
+
+* Opens Trip Creation Form.
+
+### **5. Trip Creation Form**
+
+* Source
+* Destination
+* Vehicle
+* Driver
+* Cargo Weight
+* Vehicle Capacity
+* Estimated Time
+* Dispatch Button
+
+### **6. Live Dispatch Board**
+
+**Columns:**
+
+* Trip ID
+* Source
+* Destination
+* Vehicle
+* Driver
+* Status
+
+### **7. Trip Status**
+
+* Draft
+* Dispatched
+* On Road
+* Completed
+
+### **8. Validation**
+
+* Vehicle Available
+* Driver Available
+* License Valid
+* Cargo Weight ≤ Vehicle Capacity
+* Vehicle Not In Shop
+* Driver Not Suspended
+
+### **9. Actions**
+
+* Create Trip
+* Edit Trip
+* Delete Trip
+* Dispatch Trip
+* Complete Trip
+* Cancel Trip
+
+### **10. Business Rules**
+
+* One driver per active trip
+* One vehicle per active trip
+* Cargo cannot exceed capacity
+* Vehicle & Driver status auto-update
+
+### **11. Backend APIs**
+
+* GET /api/trips
+* GET /api/trips/:id
+* POST /api/trips
+* PUT /api/trips/:id
+* DELETE /api/trips/:id
+* PUT /api/trips/:id/status
+* GET /api/trips/live
+
+### **12. Role Permissions**
+
+**Dispatcher**
+
+* Full Trip Management
+
+**Fleet Manager**
+
+* View Trips
+
+**Safety Officer**
+
+* View Trips
+
+---
+
+# **Slide 5: Maintenance**
+
+### **1. Navigation Sidebar**
+
+* Dashboard
+* Fleet
+* Drivers
+* Trips
+* Maintenance (Active)
+* Fuel & Expenses
+* Analytics
+* Settings
+
+### **2. Top Navigation**
+
+* Search Vehicle
+* User Profile
+* Role Badge
+
+### **3. Filters**
+
+* Vehicle Type
+* Maintenance Status
+* Service Date
+* Search Vehicle ID
+
+### **4. Add Maintenance Button**
+
+* Opens Maintenance Form.
+
+### **5. Maintenance Form**
+
+* Vehicle ID
+* Vehicle Type
+* Issue Description
+* Repair Cost
+* Service Date
+* Additional Notes
+* Status
+* Save
+* Cancel
+
+### **6. Maintenance Table**
+
+**Columns:**
+
+* Vehicle ID
+* Vehicle Type
+* Issue
+* Repair Cost
+* Service Date
+* Status
+* Notes
+* Actions
+
+### **7. Vehicle Status**
+
+* Available
+* In Shop
+
+### **8. Actions**
+
+* Add Record
+* Edit Record
+* Delete Record
+* Mark In Shop
+* Mark Available
+* View Service History
+
+### **9. Business Rules**
+
+* Vehicle enters In Shop during maintenance
+* In Shop vehicles unavailable for dispatch
+* Completing maintenance restores availability
+* Service history cannot be deleted
+
+### **10. Validation**
+
+* Vehicle must exist
+* Repair Cost ≥ 0
+* Service Date required
+* Issue Description required
+
+### **11. Backend APIs**
+
+* GET /api/maintenance
+* POST /api/maintenance
+* PUT /api/maintenance/:id
+* DELETE /api/maintenance/:id
+* PUT /api/maintenance/:id/status
+* GET /api/maintenance/logs
+
+### **12. Role Permissions**
+
+**Fleet Manager**
+
+* Full CRUD
+
+**Dispatcher**
+
+* View Maintenance Status
+
+**Safety Officer**
+
+* View Service History
+* Update Maintenance Status
 Insurance nearing expiry
 Service due reminder
